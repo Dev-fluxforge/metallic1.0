@@ -15,7 +15,7 @@ export default function TermsConditions() {
           <p className="text-gray-500">Last updated: October 2024</p>
         </motion.div>
 
-        <div className="prose prose-lg max-w-none text-gray-600 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-400 space-y-8">
           <section>
             <h2 className="text-2xl font-display font-bold text-brand-dark uppercase mb-4">1. Acceptance of Terms</h2>
             <p>

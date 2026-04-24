@@ -20,10 +20,10 @@ export default function Home({ addToCart }: HomeProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 uppercase">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 uppercase text-brand-dark">
                 Unleash the <span className="text-brand-gold">Road Warrior</span> in you
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 max-w-lg mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-lg mb-10 leading-relaxed">
                 Gear up with Metallic Horses - Precision engineered kits for those who push boundaries. Ride safer. Ride bolder.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -44,7 +44,7 @@ export default function Home({ addToCart }: HomeProps) {
             >
               <div className="absolute inset-0 bg-brand-gold/20 blur-[120px] rounded-full" />
               <img 
-                src="image/Helmet.png" 
+                src="/image/Helmet.png" 
                 alt="Featured Helmet" 
                 className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
               />
@@ -54,7 +54,7 @@ export default function Home({ addToCart }: HomeProps) {
       </section>
 
       {/* Categories */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
@@ -62,9 +62,9 @@ export default function Home({ addToCart }: HomeProps) {
                 <div className="w-8 h-[2px] bg-brand-gold" />
                 <span className="text-sm font-bold tracking-widest uppercase text-brand-gold">Categories</span>
               </div>
-              <h2 className="text-4xl md:text-5xl uppercase">Browse by Category</h2>
+              <h2 className="text-4xl md:text-5xl uppercase text-brand-dark">Browse by Category</h2>
             </div>
-            <p className="text-gray-500 max-w-xs">Find exactly what you need for your next adventure.</p>
+            <p className="text-gray-500 dark:text-gray-400 max-w-xs">Find exactly what you need for your next adventure.</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -78,9 +78,9 @@ export default function Home({ addToCart }: HomeProps) {
                 className="group cursor-pointer"
               >
                 <div className="bg-brand-light rounded-3xl p-8 mb-4 transition-all group-hover:bg-brand-gold/10 group-hover:-translate-y-2">
-                  <img src={cat.image} alt={cat.name} className="w-full aspect-square object-contain" />
+                  <img src={cat.image} alt={cat.name} className="w-full aspect-square object-contain dark:brightness-110" />
                 </div>
-                <h3 className="text-center font-display font-bold text-lg group-hover:text-brand-gold transition-colors">{cat.name}</h3>
+                <h3 className="text-center font-display font-bold text-lg group-hover:text-brand-gold transition-colors text-brand-dark">{cat.name}</h3>
               </motion.div>
             ))}
           </div>
@@ -96,7 +96,7 @@ export default function Home({ addToCart }: HomeProps) {
                 <div className="w-8 h-[2px] bg-brand-gold" />
                 <span className="text-sm font-bold tracking-widest uppercase text-brand-gold">Our Gear</span>
               </div>
-              <h2 className="text-4xl md:text-5xl uppercase">Featured Products</h2>
+              <h2 className="text-4xl md:text-5xl uppercase text-brand-dark">Featured Products</h2>
             </div>
             <button className="text-brand-dark font-bold flex items-center gap-2 group">
               View All Products
@@ -112,7 +112,7 @@ export default function Home({ addToCart }: HomeProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+                className="group bg-card rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-border-subtle"
               >
                 <div className="relative aspect-square p-8 bg-brand-light/50 group-hover:bg-brand-light transition-colors">
                   {product.discount && (
@@ -123,7 +123,7 @@ export default function Home({ addToCart }: HomeProps) {
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 dark:brightness-110"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                     <button 
@@ -139,7 +139,7 @@ export default function Home({ addToCart }: HomeProps) {
                 </div>
                 <div className="p-8">
                   <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 block">{product.category}</span>
-                  <h3 className="text-xl mb-4 line-clamp-1">{product.name}</h3>
+                  <h3 className="text-xl mb-4 line-clamp-1 text-brand-dark">{product.name}</h3>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl font-display font-bold text-brand-dark">₦{product.price.toLocaleString()}</span>
@@ -156,10 +156,10 @@ export default function Home({ addToCart }: HomeProps) {
       </section>
 
       {/* Brands */}
-      <section className="py-20 border-y border-gray-100 bg-white">
+      <section className="py-20 border-y border-border-subtle bg-card">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-12">Brands We Stock</h2>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-700 dark:brightness-200">
             {BRANDS.map((brand, i) => (
               <img key={i} src={brand} alt="Brand" className="h-8 md:h-12 object-contain" />
             ))}
@@ -206,7 +206,7 @@ export default function Home({ addToCart }: HomeProps) {
               <motion.img 
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                src="image/Jaket.png" 
+                src="/image/Jaket.png" 
                 alt="Promo Jacket" 
                 className="w-full max-w-xl mx-auto drop-shadow-[0_35px_35px_rgba(255,201,74,0.15)]"
               />

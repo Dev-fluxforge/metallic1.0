@@ -19,13 +19,13 @@ export default function Returns() {
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-10 rounded-[3rem] shadow-sm"
+            className="bg-card p-10 rounded-[3rem] shadow-sm border border-border-subtle"
           >
             <div className="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-gold">
               <RotateCcw className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl uppercase mb-4">30-Day Returns</h3>
-            <p className="text-gray-500 leading-relaxed">
+            <h3 className="text-2xl uppercase mb-4 text-brand-dark">30-Day Returns</h3>
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
               You have 30 days from the date of delivery to return any item for a full refund or exchange. Items must be in original, unused condition with all tags attached.
             </p>
           </motion.div>
@@ -33,13 +33,13 @@ export default function Returns() {
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-10 rounded-[3rem] shadow-sm"
+            className="bg-card p-10 rounded-[3rem] shadow-sm border border-border-subtle"
           >
             <div className="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-gold">
               <ShieldCheck className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl uppercase mb-4">Quality Guarantee</h3>
-            <p className="text-gray-500 leading-relaxed">
+            <h3 className="text-2xl uppercase mb-4 text-brand-dark">Quality Guarantee</h3>
+            <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
               If your gear arrives damaged or with a manufacturing defect, we'll replace it immediately at no extra cost to you. Your safety is our priority.
             </p>
           </motion.div>

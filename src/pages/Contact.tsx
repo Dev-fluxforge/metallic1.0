@@ -41,9 +41,9 @@ export default function Contact() {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="bg-white p-10 rounded-[2rem] shadow-sm"
+              className="bg-card p-10 rounded-[2rem] shadow-sm border border-border-subtle"
             >
-              <h3 className="text-2xl uppercase mb-8">Contact Details</h3>
+              <h3 className="text-2xl uppercase mb-8 text-brand-dark">Contact Details</h3>
               <ul className="space-y-8">
                 <li className="flex gap-6">
                   <div className="w-12 h-12 bg-brand-light rounded-2xl flex items-center justify-center text-brand-gold shrink-0">
@@ -51,7 +51,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Our Location</div>
-                    <div className="text-gray-600">13 Celestial Way, Ogudu Orioke Lagos, Nigeria</div>
+                    <div className="text-gray-600 dark:text-gray-400">13 Celestial Way, Ogudu Orioke Lagos, Nigeria</div>
                   </div>
                 </li>
                 <li className="flex gap-6">
@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Call Us</div>
-                    <div className="text-gray-600">+234 805 667 1922</div>
+                    <div className="text-gray-600 dark:text-gray-400">+234 805 667 1922</div>
                   </div>
                 </li>
                 <li className="flex gap-6">
@@ -69,7 +69,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Email Us</div>
-                    <div className="text-gray-600">sales@metalichorses.com</div>
+                    <div className="text-gray-600 dark:text-gray-400">sales@metalichorses.com</div>
                   </div>
                 </li>
               </ul>
@@ -103,16 +103,16 @@ export default function Contact() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-2 bg-white p-10 md:p-16 rounded-[3rem] shadow-sm"
+            className="lg:col-span-2 bg-card p-10 md:p-16 rounded-[3rem] shadow-sm border border-border-subtle"
           >
-            <h3 className="text-3xl uppercase mb-8">Send a Message</h3>
+            <h3 className="text-3xl uppercase mb-8 text-brand-dark">Send a Message</h3>
             <form className="grid md:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Full Name</label>
                 <input 
                   type="text" 
                   placeholder="John Doe"
-                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all"
+                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all text-brand-dark"
                 />
               </div>
               <div className="space-y-2">
@@ -120,12 +120,12 @@ export default function Contact() {
                 <input 
                   type="email" 
                   placeholder="john@example.com"
-                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all"
+                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all text-brand-dark"
                 />
               </div>
               <div className="space-y-2 md:col-span-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Subject</label>
-                <select className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all appearance-none">
+                <select className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all appearance-none text-brand-dark">
                   <option>General Inquiry</option>
                   <option>Order Support</option>
                   <option>Product Question</option>
@@ -137,11 +137,11 @@ export default function Contact() {
                 <textarea 
                   rows={6}
                   placeholder="How can we help you?"
-                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all resize-none"
+                  className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all resize-none text-brand-dark"
                 ></textarea>
               </div>
               <div className="md:col-span-2">
-                <button className="bg-brand-dark text-white px-12 py-5 rounded-full font-bold flex items-center gap-3 hover:bg-brand-gray transition-all hover:scale-105">
+                <button className="bg-brand-dark text-brand-light px-12 py-5 rounded-full font-bold flex items-center gap-3 hover:bg-brand-gray transition-all hover:scale-105">
                   <Send className="w-5 h-5" />
                   Send Message
                 </button>

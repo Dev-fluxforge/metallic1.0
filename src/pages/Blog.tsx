@@ -7,7 +7,7 @@ const POSTS = [
   {
     title: 'Icon Contra 2 Jacket Review',
     excerpt: 'The Icon Contra 2 Jacket is ready to battle the urban landscape. Constructed with the Icon Sport Fit, the Contra...',
-    image: 'image/8.png',
+    image: '/image/8.png',
     date: 'Oct 12, 2024',
     author: 'Alex Rider',
     readTime: '5 min read',
@@ -16,7 +16,7 @@ const POSTS = [
   {
     title: 'Essential Maintenance Tips',
     excerpt: 'Keeping your bike in top shape is essential for safety and performance. Here are the top 10 maintenance tips every rider should know...',
-    image: 'image/keg.png',
+    image: '/image/keg.png',
     date: 'Oct 10, 2024',
     author: 'Sarah Gear',
     readTime: '8 min read',
@@ -25,7 +25,7 @@ const POSTS = [
   {
     title: 'Choosing Your First Helmet',
     excerpt: 'Safety is paramount. When choosing your first helmet, there are several factors to consider beyond just the look...',
-    image: 'image/helement2.png',
+    image: '/image/helement2.png',
     date: 'Oct 08, 2024',
     author: 'Mike Moto',
     readTime: '6 min read',
@@ -34,7 +34,7 @@ const POSTS = [
   {
     title: 'Synthetic vs Mineral Oil',
     excerpt: 'The debate between synthetic and mineral oil has been ongoing for decades. We break down the pros and cons for your engine...',
-    image: 'image/Oil.png',
+    image: '/image/Oil.png',
     date: 'Oct 05, 2024',
     author: 'Engine Ed',
     readTime: '4 min read',
@@ -52,7 +52,7 @@ const POSTS = [
   {
     title: 'Winter Riding Gear Guide',
     excerpt: 'Don\'t let the cold stop you. Our guide to the best winter riding gear will keep you warm and dry in any weather...',
-    image: 'image/Jaket.png',
+    image: '/image/Jaket.png',
     date: 'Sep 28, 2024',
     author: 'Sarah Gear',
     readTime: '10 min read',
@@ -71,15 +71,15 @@ export default function Blog() {
               <div className="w-8 h-[2px] bg-brand-gold" />
               <span className="text-sm font-bold tracking-widest uppercase text-brand-gold">The Blog</span>
             </div>
-            <h1 className="text-5xl md:text-7xl uppercase mb-6">MH Blog</h1>
-            <p className="text-xl text-gray-600">Insights, reviews, and stories from the heart of the riding community.</p>
+            <h1 className="text-5xl md:text-7xl uppercase mb-6 text-brand-dark">MH Blog</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Insights, reviews, and stories from the heart of the riding community.</p>
           </div>
           
           <div className="relative w-full md:w-80">
             <input 
               type="text" 
               placeholder="Search articles..." 
-              className="w-full bg-white border border-gray-200 rounded-full px-6 py-4 focus:outline-none focus:border-brand-gold transition-colors"
+              className="w-full bg-card border border-border-subtle rounded-full px-6 py-4 focus:outline-none focus:border-brand-gold transition-colors text-brand-dark"
             />
             <Search className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
           </div>
@@ -153,13 +153,13 @@ export default function Blog() {
               key={num}
               className={cn(
                 "w-12 h-12 rounded-full font-bold transition-all",
-                num === 1 ? "bg-brand-dark text-white" : "bg-white text-brand-dark hover:bg-brand-gold hover:text-white"
+                num === 1 ? "bg-brand-dark text-brand-light" : "bg-card text-brand-dark hover:bg-brand-gold hover:text-white border border-border-subtle"
               )}
             >
               {num}
             </button>
           ))}
-          <button className="w-12 h-12 rounded-full bg-white text-brand-dark hover:bg-brand-gold hover:text-white transition-all flex items-center justify-center">
+          <button className="w-12 h-12 rounded-full bg-card text-brand-dark hover:bg-brand-gold hover:text-white transition-all flex items-center justify-center border border-border-subtle">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>

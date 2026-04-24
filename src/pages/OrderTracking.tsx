@@ -19,7 +19,7 @@ export default function OrderTracking() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-white p-8 md:p-12 rounded-[3rem] shadow-sm mb-20"
+          className="bg-card p-8 md:p-12 rounded-[3rem] shadow-sm mb-20 border border-border-subtle"
         >
           <form className="grid md:grid-cols-2 gap-8">
             <div className="space-y-2">
@@ -27,7 +27,7 @@ export default function OrderTracking() {
               <input 
                 type="text" 
                 placeholder="e.g. MH-12345"
-                className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all"
+                className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all text-brand-dark"
               />
             </div>
             <div className="space-y-2">
@@ -35,11 +35,11 @@ export default function OrderTracking() {
               <input 
                 type="email" 
                 placeholder="your@email.com"
-                className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all"
+                className="w-full bg-brand-light border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-gold transition-all text-brand-dark"
               />
             </div>
             <div className="md:col-span-2">
-              <button className="w-full bg-brand-dark text-white py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-brand-gray transition-all">
+              <button className="w-full bg-brand-dark text-brand-light py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-brand-gray transition-all">
                 <Search className="w-5 h-5" />
                 Track Order
               </button>

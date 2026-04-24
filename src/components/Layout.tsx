@@ -102,7 +102,7 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
           </div>
 
           <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-            <img src="image/image 1.png" alt="Metallic Horses" className="h-10 md:h-12 object-contain" />
+            <img src="/image/image 1.png" alt="Metallic Horses" className="h-10 md:h-12 object-contain" />
           </Link>
 
           <div className="flex items-center gap-4 md:gap-8">
@@ -150,11 +150,11 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              className="fixed top-0 left-0 bottom-0 w-[80%] max-w-sm bg-white z-[70] p-8"
+              className="fixed top-0 left-0 bottom-0 w-[80%] max-w-sm bg-card z-[70] p-8"
             >
               <div className="flex items-center justify-between mb-12">
-                <img src="image/image 1.png" alt="Logo" className="h-8" />
-                <button onClick={() => setIsMobileMenuOpen(false)}>
+                <img src="/image/image 1.png" alt="Logo" className="h-8 dark:brightness-200" />
+                <button onClick={() => setIsMobileMenuOpen(false)} className="text-brand-dark">
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -183,28 +183,28 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white pt-20 pb-10">
+      <footer className="bg-card pt-20 pb-10 border-t border-border-subtle">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div>
-              <h4 className="text-xl uppercase mb-8">Contact Info</h4>
+              <h4 className="text-xl uppercase mb-8 text-brand-dark">Contact Info</h4>
               <ul className="space-y-6">
-                <li className="flex gap-4 text-gray-500">
+                <li className="flex gap-4 text-gray-500 dark:text-gray-400">
                   <MapPin className="w-6 h-6 text-brand-gold shrink-0" />
                   <span>13 Celestial Way, Ogudu Orioke Lagos</span>
                 </li>
-                <li className="flex gap-4 text-gray-500">
+                <li className="flex gap-4 text-gray-500 dark:text-gray-400">
                   <Phone className="w-6 h-6 text-brand-gold shrink-0" />
                   <span>+234 805 667 1922</span>
                 </li>
-                <li className="flex gap-4 text-gray-500">
+                <li className="flex gap-4 text-gray-500 dark:text-gray-400">
                   <Mail className="w-6 h-6 text-brand-gold shrink-0" />
                   <span>sales@metalichorses.com</span>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-xl uppercase mb-8">Quick Links</h4>
+              <h4 className="text-xl uppercase mb-8 text-brand-dark">Quick Links</h4>
               <ul className="space-y-4">
                 {[
                   { name: 'Terms and Conditions', path: '/terms' },
@@ -213,7 +213,7 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
                   { name: 'Returns', path: '/returns' }
                 ].map(item => (
                   <li key={item.name}>
-                    <Link to={item.path} className="text-gray-500 hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <Link to={item.path} className="text-gray-500 dark:text-gray-400 hover:text-brand-gold transition-colors flex items-center gap-2">
                       <ChevronRight className="w-4 h-4" /> {item.name}
                     </Link>
                   </li>
@@ -221,7 +221,7 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
               </ul>
             </div>
             <div>
-              <h4 className="text-xl uppercase mb-8">Company</h4>
+              <h4 className="text-xl uppercase mb-8 text-brand-dark">Company</h4>
               <ul className="space-y-4">
                 {[
                   { name: 'About Us', path: '/about' },
@@ -230,7 +230,7 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
                   { name: 'Payment Methods', path: '/payments' }
                 ].map(item => (
                   <li key={item.name}>
-                    <Link to={item.path} className="text-gray-500 hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <Link to={item.path} className="text-gray-500 dark:text-gray-400 hover:text-brand-gold transition-colors flex items-center gap-2">
                       <ChevronRight className="w-4 h-4" /> {item.name}
                     </Link>
                   </li>
@@ -238,11 +238,11 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
               </ul>
             </div>
             <div>
-              <h4 className="text-xl uppercase mb-8">Follow Us</h4>
-              <p className="text-gray-500 mb-8 text-sm">Join our community of road warriors and share your journey.</p>
+              <h4 className="text-xl uppercase mb-8 text-brand-dark">Follow Us</h4>
+              <p className="text-gray-500 dark:text-gray-400 mb-8 text-sm">Join our community of road warriors and share your journey.</p>
               <div className="flex gap-4">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#" className="w-12 h-12 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white hover:border-brand-gold transition-all">
+                  <a key={i} href="#" className="w-12 h-12 rounded-full border border-border-subtle flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white hover:border-brand-gold transition-all">
                     <Icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -250,8 +250,8 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
             </div>
           </div>
           
-          <div className="pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
-            <img src="image/image 1.png" alt="Logo" className="h-8 opacity-50" />
+          <div className="pt-10 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-8">
+            <img src="/image/image 1.png" alt="Logo" className="h-8 opacity-50 dark:brightness-200" />
             <p className="text-gray-400 text-sm">
               Copyright &copy; 2024 FLUXFORGE. All rights reserved.
             </p>
@@ -274,17 +274,17 @@ export default function Layout({ children, cart, setCart }: LayoutProps) {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-[110] shadow-2xl flex flex-col"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-card z-[110] shadow-2xl flex flex-col"
             >
-              <div className="p-8 border-b flex items-center justify-between">
+              <div className="p-8 border-b border-border-subtle flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <ShoppingCart className="w-6 h-6 text-brand-gold" />
-                  <h2 className="text-2xl uppercase">Your Cart</h2>
+                  <h2 className="text-2xl uppercase text-brand-dark">Your Cart</h2>
                   <span className="bg-brand-light px-3 py-1 rounded-full text-xs font-bold text-gray-500">{totalItems} items</span>
                 </div>
                 <button 
                   onClick={() => setIsCartOpen(false)}
-                  className="p-2 hover:bg-brand-light rounded-full transition-colors"
+                  className="p-2 hover:bg-brand-light rounded-full transition-colors text-brand-dark"
                 >
                   <X className="w-6 h-6" />
                 </button>

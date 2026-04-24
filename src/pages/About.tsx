@@ -29,7 +29,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 leading-relaxed"
+            className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed"
           >
             Founded by riders, for riders. Metallic Horses was born out of a passion for the open road and a commitment to uncompromising safety and performance.
           </motion.p>
@@ -70,13 +70,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all"
+              className="bg-card p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-border-subtle"
             >
               <div className="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-gold">
                 <value.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl uppercase mb-4">{value.title}</h3>
-              <p className="text-gray-500 leading-relaxed">{value.desc}</p>
+              <h3 className="text-xl uppercase mb-4 text-brand-dark">{value.title}</h3>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{value.desc}</p>
             </motion.div>
           ))}
         </div>

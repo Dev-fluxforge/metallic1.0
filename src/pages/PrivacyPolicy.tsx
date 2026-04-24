@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           <p className="text-gray-500">Last updated: October 2024</p>
         </motion.div>
 
-        <div className="prose prose-lg max-w-none text-gray-600 space-y-8">
+        <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-400 space-y-8">
           <section>
             <h2 className="text-2xl font-display font-bold text-brand-dark uppercase mb-4">1. Information We Collect</h2>
             <p>
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
             </ul>
           </section>
 
-          <section className="bg-brand-gold/5 p-8 rounded-3xl border border-brand-gold/10">
+          <section className="bg-brand-gold/5 p-8 rounded-3xl border border-brand-gold/10 dark:bg-brand-gold/10">
             <h2 className="text-xl font-display font-bold text-brand-dark uppercase mb-4 flex items-center gap-2">
               <Shield className="w-5 h-5 text-brand-gold" />
               Your Data Rights
